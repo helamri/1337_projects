@@ -1,0 +1,7 @@
+#1 - En session graphique
+- Log out
+- Enter login helamri
+- Enter password
+
+#2 - En ssh
+ssh helamri@127.0.0.1

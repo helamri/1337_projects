@@ -1,0 +1,8 @@
+#!/bin/bash
+#run a command passed as an argument
+for i in "$@"
+do
+	echo "command: "$i
+	eval $i
+	echo "**************************************************"
+done

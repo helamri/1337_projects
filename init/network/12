@@ -1,0 +1,3 @@
+/*To check open the System Preferences => Network
+.*/ 
+ipconfig getifaddr en0
