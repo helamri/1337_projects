@@ -1,0 +1,38 @@
+body{
+  animation: bodycolor 5s forwards;
+}
+div{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+    background: red !important;
+    position: absolute;
+    left: 0;
+      right: 0;
+      margin: auto;
+      animation: divisibility 5s forwards, mymove 4s forwards;
+  }
+  @keyframes mymove {
+    0% {top: 0px;}
+    50% {top: 1120px;}
+    100% {top: 575px;}
+  }
+  @keyframes bodycolor {
+    0% { background-color: blue; }
+    25% { background-color: orange; }
+    50% { background-color: yellow; }
+    75% { background-color: black; }
+    100% { background-color: lightcyan; }
+  }
+  
+  @keyframes divisibility {
+    0% { opacity: 1.0; }
+    25% { opacity: 0.75; }
+    50% { opacity: 0.50; }
+    75% { opacity: 0.25; }
+    100% { opacity: 0.0; }
+  }
+
+  
