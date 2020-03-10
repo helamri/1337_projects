@@ -2,7 +2,7 @@
 
 **STEPS**:
 - install npm
-- install mongo from here https://www.mongodb.com/download-center/community
+- install mongodb from here https://www.mongodb.com/download-center/community
 - create an empty folder for your database and make it's name **hyper**
 - unzip mongo folder and open your terminal to /mongodb-macos-x86_64-4.2.3/bin
 - type <**./mongod --dbpath [the_path_of_your_hyper_folder]**>
