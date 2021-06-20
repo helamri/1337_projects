@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string name="app_name">ft_hangouts</string>
+    <string name="action_settings">تعديلات</string>
+    <string name="Add_New">زيد واحد</string>
+    <string name="edit">عدل</string>
+    <string name="delete">امسح واحد</string>
+    <string name="title_activity_detail_contact">معلومات</string>
+    <string name="name">السمية</string>
+    <string name="phone">النمرة دالتيليفون</string>
+    <string name="email">ليميل</string>
+    <string name="street">لادريسة</string>
+    <string name="country">البلاد</string>
+    <string name="save">اوكي</string>
+    <string name="deleteContact">واش انت متأكد؟</string>
+    <string name="yes">اه</string>
+    <string name="no">لا</string>
+    <string name="numero">النمرة</string>
+    <string name="app_name1">صيفط الرسالة</string>
+    <string name="message">رسالة</string>
+    <string name="envoyer">صيفط</string>
+    <string name="sms">sms</string>
+    <string name="call">اتصل دابا</string>
+    <string name="night_mode_off">مضوي</string>
+    <string name="night_mode_on">مظلم</string>
+</resources>
