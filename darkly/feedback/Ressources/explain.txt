@@ -1,0 +1,26 @@
+LOCATION : `IP/?page=feedback`
+Inspecting the source code we see 2 interesing facts :
+
+1) The forms calls the validate_form() js at submission
+<form method="post" name="guestform" onsubmit="return validate_form(this)">
+
+2) The form button calls the checkForm() function on click
+<input name="btnSign" type="Submit" value="Sign Guestbook" onclick="return checkForm();">
+
+when we submit the form we see on the console an error message concerning checkForm(). It doesn't exist.
+
+we implement the function on the console this way :
+
+function checkForm()
+    {
+        document.guestform.setAttribute("onsubmit", "return true");
+    }
+
+This code can change the "onsubmit" attribut of the form's name element in order to submit the form
+without any check on client side.
+
+Now we can try a Cross-Site Scripting (XSS).
+We just enter "script" in name or message input then we got the flag.
+
+How to secure :
+check  && validate inputs before submit data, also you can encode the input.

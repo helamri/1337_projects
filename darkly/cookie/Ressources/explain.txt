@@ -1,0 +1,13 @@
+using the python script we can see that a cookie is set by the website:
+{'I_am_admin': '68934a3e9455fa72420237eb05902327'}
+
+after testing on different hashs algos, we can see that it's a md5 hash which digest is 'false'.
+so we change it to 'true': b326b5062b2f0e69046810717534cb09 and we test again 
+after refresh an alert pops the flag.
+
+use the website below to verify the hash:
+https://md5decrypt.net/
+
+for more secure:
+1 . do not put critical information in cookies.
+2 . use high encrypted cookies with private signature like JWT or any other

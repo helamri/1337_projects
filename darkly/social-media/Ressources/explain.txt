@@ -1,0 +1,6 @@
+we can found in every page a footer with social media links like:
+http://192.168.x.x/index.php?page=redirect&site=instagram
+after we change the site value we can get the flag.
+
+How to secure: 
+check the params values.

@@ -1,0 +1,16 @@
+o
+If we visit the path `/index.php?page=recover` :
+    - from the first look at the page we notice that there is a submit button without a form, and 
+        the button submit something ofc by looking at the network panel
+    - so lets inspect the html of this part
+    - w'll find a form with a post method and an input with it's type equal to hidden (which means not displayed).
+
+we have two different ways to submit this form :
+- changing the html code : deleting hidden with the navigator tools. A field shows and we put a random value then submit.
+- sending a request through a python code.
+
+Lets use the second way and look at the response
+by executing the python code we get a response with a flag, and that what we need
+
+How to secure :
+even by setting a costum input in client side we must validate it on the server side and secure request by encrypted token always.

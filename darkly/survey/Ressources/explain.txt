@@ -1,0 +1,10 @@
+LOCATION : MAIN NAV -> SURVEY -> /?page=survey
+
+inspecting the page survey we can see it is a form that is submetting automaticaly when the value of the grade is changing.
+it is a post method with two arguments :
+- sujet
+- valeur
+we sent a post request with new data. then we get the flag.
+
+How to secure :
+validate the payload in the server side before submit it to database or even execute it.

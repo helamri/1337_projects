@@ -1,0 +1,10 @@
+LOCATION : `IP/index.php?page=signin`
+
+we try to bruteforce the signin page.
+we use the login 'admin' or 'root' because they are the most common.
+we use a bruteforce script : password_brute_force.py that takes a list of most used password called passwords.txt that we found
+here: https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10k-most-common.txt
+
+How to secure:
+implement limitation on the number of request possible by an ip and then block it (use fail2Ban in server side for example).
+use complicated custom password.

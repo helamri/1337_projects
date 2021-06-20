@@ -1,0 +1,14 @@
+LOCATION : HOME PAGE -> FOOTER -> (© BornToSec) -> ?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c
+We can find the page http://192.168.56.101/?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c by clicking on the copyright sign in the page footer (© BornToSec).
+after inspecting the page we can find two critical informations in the comments section :
+
+"""
+    https://www.nsa.gov/
+    ft_bornToSec
+"""
+
+So we determine that we need to  simulate another Request while using `https://www.nsa.gov/` as Referer and `ft_bornToSec` as User-Agent (browser).
+the response of the Request gives us an Html with the wanted Flag.
+
+How to secure:
+ - check the source of request by pre-processing the headers , and ofc use an Authorization token Check at every request between (client <-> server).

@@ -1,0 +1,10 @@
+
+LOCATION : "ADD IMAGE" button in the home page 
+
+on the home page we click on the "ADD IMAGE" button.
+on 'http://192.168.x.x/index.php?page=upload' page we upload a file with double extension in the name like: image.jpg.jpg
+then we got the flag.
+
+How to secure:
+put users uploaded files in a separate folder, with the appropriate rights (read/write only).
+for any file sent by the user, it is important to check and clean the file name.

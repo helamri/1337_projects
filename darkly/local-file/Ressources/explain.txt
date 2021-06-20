@@ -1,0 +1,25 @@
+Since the website is hosted in a linux server
+and the global structure of the linux servers have the password of the session and machine in /etc/passwd (recently is changed to /etc/shadow)
+
+for that w'll try to find the correct path of etc/passwd in the server depending on where the website is stored in the machine by trying multiple paths starting from :
+?page=/etc/passwd
+?page=../etc/passwd
+?page=../../etc/passwd
+....
+?page=../../../../../../../etc/passwd
+
+the number of ‘../’ depends on location of the target web server.
+
+we get a special popup with a different message everytime we add a '../' following with 'etc/passwd'.
+we add mulitple '../' till we find the correct location which contains informations about the users.
+
+then we get the flag.
+- Correct path : `?page=../../../../../../../etc/passwd`
+
+to have more fun, we create a python script to do this programatically.
+
+How to secure: 
+    use a whitelist of filenames and ignore every other filename and path.
+    save the file paths in a database and assign an id to each of them.
+    
+    in short : Prevent unwanted path to be processed

@@ -1,0 +1,12 @@
+
+LOCATION : /robots.txt
+
+the `robots.txt` file is useful for finding hidden or secure paths on a website.
+it is always located at the root so here `http://192.168.x.x/robots.txt`, it is a public file.
+we find two restricted paths: `/whatever` and` /.hidden`.
+on `http://192.168.x.x/.hidden` there is a long list of folders with subfolders, difficult to analyze manually.
+to find the flag in these folders you can download all the `README` files and after identifying recurrences, exclude repetitive sentences to identify potential files that differ.
+then we get the flag.
+
+How to secure:
+just like the `robots.txt` file, you can protect access to sensitive files/folders via the `.htaccess`.

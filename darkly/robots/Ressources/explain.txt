@@ -1,0 +1,20 @@
+the robots.txt file is useful for finding hidden or secure paths on a website.
+It is always located at the root so here `http://192.168.x.x/robots.txt`, it is a public file.
+
+we find two restricted paths from being crawled by the search engine bots :
+     - `/whatever`
+     - `/.hidden`
+
+on `http://192.168.x.x/whatever` we find a file`htpasswd` which contains `root: 8621ffdbc5698829397d97767ac13db3`.
+this seems like a super admin credentials, wich means not accesible to anyone, and the standard admin panel path for most of websites either /admin or /adminpanel
+
+username: `root`
+password (md5 decoded): `dragon`
+
+this combination can be used to connect to the administrator panel of the site `http://192.168.x.x/admin`.
+
+How to secure:
+    add a rule in the` .htaccess` to disallow all search engine robots from indexing and crawling 
+    the development environement and protect the paths that leads to it like this:
+            User-agent: *
+            Disallow: /
